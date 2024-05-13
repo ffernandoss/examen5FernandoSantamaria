@@ -85,7 +85,6 @@ ComponenteRestaurante
 
 tanto el codigo como el diagrama uml se encuentra dentro del paquete de entrega4
 
-clases:
 
 
 
