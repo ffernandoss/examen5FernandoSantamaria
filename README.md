@@ -1,90 +1,89 @@
 https://github.com/ffernandoss/examen5FernandoSantamaria.git
 
+# Examen 5 - Fernando Santamaria
 
-entrega 1
-esta formado por
+## Entrega 1
 
-clases:
-EstrategiaDeServicioDeLujo
-EstrategiaDeServicioRapido
-EstrategiaDeServicioTematico
-GestorDeRestaurante
-Main
-RestauranteDeLujo
-RestauranteFactory
-RestauranteRapido
-RestauranteTematico
+Formado por las siguientes clases e interfaces:
 
-interfaces
-EntregaDeServicio
-Restaurante
+### Clases:
+- EstrategiaDeServicioDeLujo
+- EstrategiaDeServicioRapido
+- EstrategiaDeServicioTematico
+- GestorDeRestaurante
+- Main
+- RestauranteDeLujo
+- RestauranteFactory
+- RestauranteRapido
+- RestauranteTematico
 
-tanto este codigo como el uml correspondiente se encuentra dentro del paquete entrega1, sus tests estan dentro de la carpeta test en la clase testsEntrega1
+### Interfaces:
+- EntregaDeServicio
+- Restaurante
 
+El código y el diagrama UML correspondiente se encuentran dentro del paquete `entrega1`. Los tests están dentro de la carpeta `test` en la clase `testsEntrega1`.
 
-entrega 2
+## Entrega 2
 
-esta formado por
+Formado por la siguiente clase abstracta, clases e interfaces:
 
-clase abstracta:
-ComponenteRestaurante
+### Clase abstracta:
+- ComponenteRestaurante
 
-clases:
-AdapterSistemaExterno
-GrupoRestaurante
-Main
-ObserverImpl
-SistemaExternoImpl
+### Clases:
+- AdapterSistemaExterno
+- GrupoRestaurante
+- Main
+- ObserverImpl
+- SistemaExternoImpl
 
-interfaces:
-Observer
-SistemaExterno
+### Interfaces:
+- Observer
+- SistemaExterno
 
-tanto el codigo como el diagrama uml correspondiente se encuentra dentro del paquete entrega2
+El código y el diagrama UML correspondiente se encuentran dentro del paquete `entrega2`.
 
+## Entrega 3
 
-entrega 3
+Formado por la siguiente clase abstracta, clases e interfaces:
 
-clase abstracta:
-Componente
+### Clase abstracta:
+- Componente
 
-clases:
-cancelarCommand
-Cocina
-Entrega
-Libre
-Main
-Mesa
-Ocupada
-OrdenarCommand
-Reservada
-ReservarCommand
-RestauranteMediator
-ServicioAlcliente
+### Clases:
+- CancelarCommand
+- Cocina
+- Entrega
+- Libre
+- Main
+- Mesa
+- Ocupada
+- OrdenarCommand
+- Reservada
+- ReservarCommand
+- RestauranteMediator
+- ServicioAlCliente
 
-interfaces:
-Command
-EstadoMesa
-Mediator
+### Interfaces:
+- Command
+- EstadoMesa
+- Mediator
 
-tanto el codigo como el diagrama uml correspondiente esta dentro del paquete entrega 3
+El código y el diagrama UML correspondiente se encuentran dentro del paquete `entrega3`.
 
-entrega4
-esta formada por 
+## Entrega 4
 
-clases:
-ControladorRestaurante
-ElementoRestaurante
-Main
-ModeloRestaurante
-Restaurante
-VistaRestaurante
+Formado por las siguientes clases e interfaces:
 
-interfaces:
-ComponenteRestaurante
+### Clases:
+- ControladorRestaurante
+- ElementoRestaurante
+- Main
+- ModeloRestaurante
+- Restaurante
+- VistaRestaurante
 
-tanto el codigo como el diagrama uml se encuentra dentro del paquete de entrega4
+### Interfaces:
+- ComponenteRestaurante
 
-
-
-
+El código y el diagrama UML correspondiente se encuentran dentro del paquete `entrega4`.
