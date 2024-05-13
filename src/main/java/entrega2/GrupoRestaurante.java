@@ -1,5 +1,4 @@
-import entrega2.ComponenteRestaurante;
-
+package entrega2;
 import java.util.ArrayList;
 import java.util.List;
 
