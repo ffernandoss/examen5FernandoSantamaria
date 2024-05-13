@@ -7,6 +7,6 @@ public class ServicioAlCliente extends Componente {
 
     @Override
     public void recibir(String mensaje) {
-        // Código para recibir mensaje
+        System.out.println("mensaje redibido: "+mensaje);
     }
 }
