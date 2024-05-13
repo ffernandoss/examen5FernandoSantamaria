@@ -1,0 +1,40 @@
+@startuml
+
+interface ComponenteRestaurante {
+  +agregar(componente: ComponenteRestaurante): void
+  +eliminar(componente: ComponenteRestaurante): void
+  +mostrar(): void
+}
+
+class Restaurante {
+  +agregar(componente: ComponenteRestaurante): void
+  +eliminar(componente: ComponenteRestaurante): void
+  +mostrar(): void
+  +getNombre(): String
+}
+
+class ElementoRestaurante {
+  +agregar(componente: ComponenteRestaurante): void
+  +eliminar(componente: ComponenteRestaurante): void
+  +mostrar(): void
+}
+
+class ModeloRestaurante {
+  +agregarComponente(componente: ComponenteRestaurante): void
+  +eliminarComponente(componente: ComponenteRestaurante): void
+  +mostrarRestaurante(): String
+}
+
+class VistaRestaurante {
+  +mostrarRestaurante(info: String): void
+}
+
+class ControladorRestaurante {
+  +agregarComponente(componente: ComponenteRestaurante): void
+  +eliminarComponente(componente: ComponenteRestaurante): void
+}
+
+ComponenteRestaurante <|.. Restaurante
+ComponenteRestaurante <|.. ElementoRestaurante
+
+@enduml

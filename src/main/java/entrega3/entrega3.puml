@@ -1,0 +1,80 @@
+@startuml
+
+interface Command {
+  +execute(): void
+}
+
+interface Mediator {
+  +addComponente(componente: Componente): void
+  +comunicar(mensaje: String, componente: Componente): void
+}
+
+interface EstadoMesa {
+  +manejar(mesa: Mesa): void
+}
+
+abstract class Componente {
+  +recibir(mensaje: String): void
+}
+
+class ReservarCommand {
+  +execute(): void
+}
+
+class CancelarCommand {
+  +execute(): void
+}
+
+class OrdenarCommand {
+  +execute(): void
+}
+
+class Cocina {
+  +recibir(mensaje: String): void
+}
+
+class ServicioAlCliente {
+  +recibir(mensaje: String): void
+}
+
+class Entrega {
+  +recibir(mensaje: String): void
+}
+
+class Libre {
+  +manejar(mesa: Mesa): void
+}
+
+class Reservada {
+  +manejar(mesa: Mesa): void
+}
+
+class Ocupada {
+  +manejar(mesa: Mesa): void
+}
+
+class Mesa {
+  +setEstado(estado: EstadoMesa): void
+  +manejarEstado(): void
+}
+
+class RestauranteMediator {
+  +addComponente(componente: Componente): void
+  +comunicar(mensaje: String, componente: Componente): void
+}
+
+Command <|.. ReservarCommand
+Command <|.. CancelarCommand
+Command <|.. OrdenarCommand
+
+Componente <|-- Cocina
+Componente <|-- ServicioAlCliente
+Componente <|-- Entrega
+
+EstadoMesa <|.. Libre
+EstadoMesa <|.. Reservada
+EstadoMesa <|.. Ocupada
+
+Mediator <|.. RestauranteMediator
+
+@enduml

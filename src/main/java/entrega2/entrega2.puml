@@ -1,0 +1,49 @@
+@startuml
+
+interface Restaurante {
+  +atender(): void
+}
+
+interface SistemaExterno {
+  +reservar(): void
+  +entregarComida(): void
+}
+
+interface Observer {
+  +update(): void
+}
+
+class ComponenteRestaurante {
+  +addObserver(observer: Observer): void
+  +removeObserver(observer: Observer): void
+  +notifyObservers(): void
+  +atender(): void
+}
+
+class GrupoRestaurante {
+  +addComponente(componente: ComponenteRestaurante): void
+  +removeComponente(componente: ComponenteRestaurante): void
+  +atender(): void
+}
+
+class AdapterSistemaExterno {
+  +atender(): void
+}
+
+class SistemaExternoImpl {
+  +reservar(): void
+  +entregarComida(): void
+}
+
+class ObserverImpl {
+  +update(): void
+}
+
+Restaurante <|.. ComponenteRestaurante
+ComponenteRestaurante <|-- GrupoRestaurante
+ComponenteRestaurante <|-- AdapterSistemaExterno
+SistemaExterno <|.. SistemaExternoImpl
+Observer <|.. ObserverImpl
+AdapterSistemaExterno ..> SistemaExterno
+
+@enduml

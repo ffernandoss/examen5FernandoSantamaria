@@ -1,0 +1,58 @@
+@startuml
+
+interface Restaurante {
+  +atender(): void
+}
+
+interface EstrategiaDeServicio {
+  +ejecutarEstrategia(): void
+}
+
+class RestauranteRapido {
+  +atender(): void
+}
+
+class RestauranteTematico {
+  +atender(): void
+}
+
+class RestauranteDeLujo {
+  +atender(): void
+}
+
+class EstrategiaDeServicioRapido {
+  +ejecutarEstrategia(): void
+}
+
+class EstrategiaDeServicioTematico {
+  +ejecutarEstrategia(): void
+}
+
+class EstrategiaDeServicioDeLujo {
+  +ejecutarEstrategia(): void
+}
+
+class RestauranteFactory {
+  +crearRestaurante(tipo: String): Restaurante
+}
+
+class GestorDeRestaurante {
+  -restaurantes: List<Restaurante>
+  -instancia: GestorDeRestaurante
+  +getInstancia(): GestorDeRestaurante
+  +addRestaurante(restaurante: Restaurante): void
+  +deleteRestaurante(restaurante: Restaurante): void
+  +getRestaurante(): void
+}
+
+Restaurante <|.. RestauranteRapido
+Restaurante <|.. RestauranteTematico
+Restaurante <|.. RestauranteDeLujo
+
+EstrategiaDeServicio <|.. EstrategiaDeServicioRapido
+EstrategiaDeServicio <|.. EstrategiaDeServicioTematico
+EstrategiaDeServicio <|.. EstrategiaDeServicioDeLujo
+
+GestorDeRestaurante "1" -- "0..*" Restaurante
+
+@enduml
