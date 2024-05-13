@@ -11,6 +11,10 @@ public class Restaurante implements ComponenteRestaurante {
         this.nombre = nombre;
     }
 
+    public String getNombre() {
+        return nombre;
+    }
+
     @Override
     public void agregar(ComponenteRestaurante componente) {
         componentes.add(componente);
